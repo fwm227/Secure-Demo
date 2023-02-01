@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <input type="text" id="input-element"></input>
+  <button onclick="injectText()">submit</button>
+  <p id="text-content"></p>
+  <script>
+    const inputElem = document.querySelector('#input-element')
+    const textContentElement = document.querySelector('#text-content')
+    inputElem.value = '<img onerror="alert(123)" src="" />'
+    function injectText () {
+      textContentElement.innerHTML = inputElem.value
+    }
+  </script>
+</body>
+</html>
